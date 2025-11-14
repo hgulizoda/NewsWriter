@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #484747ff;
+  font-family: "Roboto";
+}
+
+footer a {
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  font-size: 12px;
+}

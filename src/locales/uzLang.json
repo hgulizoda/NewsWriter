@@ -1,0 +1,116 @@
+{
+  "header": {
+    "logo": "Times Writer",
+    "subtitle": "Dunyo haqida ko'proq ma'lumot oling",
+    "menu": {
+      "home": "Bosh sahifa",
+      "savedPosts": "Saqlangan postlar",
+      "politics": "Siyosat",
+      "art": "San'at",
+      "science": "Fan",
+      "travel": "Sayohat",
+      "crime": "Jinoyat",
+      "contact": "Biz bilan bog'lanish"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitter": "Twitter",
+      "likes": "Yoqtirishlar"
+    }
+  },
+  "footer": {
+    "sections": {
+      "news": {
+        "title": "YANGILIKLAR",
+        "items": [
+          "Bosh sahifa",
+          "O'zbekiston",
+          "Dunyo",
+          "Siyosat",
+          "Sport",
+          "Biznes"
+        ]
+      },
+      "arts": {
+        "title": "SAN'AT",
+        "items": [
+          "Kitob sharhi",
+          "Eng yaxshi sotilgan kitoblar ro'yxati",
+          "Raqs",
+          "Filmlar"
+        ]
+      },
+      "lifestyle": {
+        "title": "HAYOT TARZI",
+        "items": [
+          "Salomatlik",
+          "Oziq-ovqat",
+          "Restoranlar",
+          "Sayohat",
+          "Uslub",
+          "Moda",
+          "Sevgi"
+        ]
+      },
+      "opinion": {
+        "title": "FIKR-MULOHAZA",
+        "items": ["Bugungi fikr", "Ustunlar", "Tahririyat", "Xatlar", "Op-dok"]
+      },
+      "entertainment": {
+        "title": "KO'NGIL OCHISH",
+        "items": ["Ijtimoiy tarmoqlar", "Instagram", "Hobbi", "Televidenie"]
+      },
+      "more": {
+        "title": "BOSHQA",
+        "items": [
+          "Grafika",
+          "O'yinlar",
+          "Audio",
+          "Ishlar",
+          "Trend",
+          "O'quv markazi",
+          "Times Machine",
+          "Pishirish",
+          "Ta'lim",
+          "Fan"
+        ]
+      },
+      "account": {
+        "title": "HISOB",
+        "items": [
+          "Obuna bo'lish",
+          "Hisobimni boshqarish",
+          "Guruh obunalari",
+          "Sovg'a maqolalar",
+          "Elektron pochta yangiliklari"
+        ]
+      }
+    },
+    "bottom": {
+      "copyright": "© 2025 The New York Times Company",
+      "links": [
+        "Biz bilan bog'lanish",
+        "Kirish imkoniyati",
+        "Biz bilan ishlash",
+        "Reklama berish",
+        "Maxfiylik siyosati",
+        "Cookie siyosati",
+        "Foydalanish shartlari",
+        "Yordam",
+        "Obunalar",
+        "Sayt xaritasi",
+        "Savdo shartlari",
+        "T brand studiyasi"
+      ]
+    }
+  },
+  "common": {
+    "error": "Oops, nimadir xato ketdi!",
+    "noSaved": "Hali post saqlamadingiz!",
+    "enter": "Qidiruv...",
+    "back": "Orqaga",
+    "notFound": "Post topilmadi"
+  }
+}

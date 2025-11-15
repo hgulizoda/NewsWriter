@@ -3,13 +3,13 @@ import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { Stack, Typography } from "@mui/material";
 
-const ActionsArea = ({ reactions, views }) => {
+const ActionsArea = ({ reactions, views, color = "grey" }) => {
   return (
     <Stack
       direction="row"
       spacing="20px"
       sx={{
-        color: "grey",
+        color: { color },
         marginBottom: "20px",
         paddingInline: "10px",
       }}

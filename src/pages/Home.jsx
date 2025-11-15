@@ -5,6 +5,7 @@ import MainCard from "../components/MainCard";
 import HorizondalCard from "../components/HorizontalCard";
 import NetworkError from "../components/NetworkError";
 import Loader from "../components/Loader";
+import useAppContext from "../hooks/useContext";
 
 const Home = () => {
   const { data, error, loading } = useFetch("https://dummyjson.com/posts");

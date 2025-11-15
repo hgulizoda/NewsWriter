@@ -1,16 +1,10 @@
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  IconButton,
-} from "@mui/material";
-import { Link } from "react-router-dom";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { Card, CardMedia, Typography, Box, IconButton } from "@mui/material";
 import ActionsArea from "./ActionsArea";
+import { Link } from "react-router-dom";
 import useAppContext from "../hooks/useContext";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
 
-const LongPostCard = ({ ...rest }) => {
+const SavedPosts = ({ ...rest }) => {
   const { likedPosts, setLikedPosts } = useAppContext();
   const isOnSavedList =
     likedPosts.findIndex((post) => post.id === rest.id) !== -1;
@@ -24,14 +18,9 @@ const LongPostCard = ({ ...rest }) => {
   }
   return (
     <Card
+      sx={{ position: "relative" }}
       component={Link}
       to={`/detail/${rest.id}`}
-      sx={{
-        textDecoration: "none",
-        color: "inherit",
-        paddingBottom: "20px",
-        maxWidth: "25%",
-      }}
     >
       <IconButton
         onClick={(e) => {
@@ -45,6 +34,7 @@ const LongPostCard = ({ ...rest }) => {
           backgroundColor: "#cec2c27f",
           marginTop: "10px",
           marginLeft: "10px",
+          zIndex: "100",
           "&:hover": {
             color: "rgba(201, 61, 61, 1)",
           },
@@ -52,21 +42,35 @@ const LongPostCard = ({ ...rest }) => {
       >
         <BookmarkIcon />
       </IconButton>
-
       <CardMedia
         component="img"
-        height="180"
+        height="350"
+        width="100%"
+        sx={{ position: "relative" }}
         image={`https://picsum.photos/seed/${rest.id}/300/200`}
-      ></CardMedia>
-      <CardContent sx={{ paddingInline: "5px", height: "180px" }}>
-        <Typography variant="h6">{rest.title}</Typography>
-        <Typography variant="body2" color="grey.700">
-          {rest.body.split(" ").slice(0, 30).join(" ")}...
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "40%",
+          overflow: "hidden",
+          zIndex: 1,
+          backgroundColor: "rgba(28, 23, 23, 0.46)",
+          p: 2,
+          boxSizing: "border-box",
+          color: "rgba(221, 224, 227, 1)",
+        }}
+      >
+        <Typography variant="h6" fontSize="18px" sx={{ marginBottom: "20px" }}>
+          {rest.title}
         </Typography>
-      </CardContent>
-      <ActionsArea {...rest} />
+        <ActionsArea {...rest} color="rgba(225, 232, 231, 1)" />
+      </Box>
     </Card>
   );
 };
 
-export default LongPostCard;
+export default SavedPosts;

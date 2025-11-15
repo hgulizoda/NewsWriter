@@ -5,6 +5,7 @@ import Loader from "../components/Loader";
 import HorizontalCard from "../components/HorizontalCard";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ActionsArea from "../components/ActionsArea";
+import { useTranslation } from "react-i18next";
 const PostDetail = () => {
   const { postId } = useParams();
   const { data, error, loading } = useFetch(
@@ -12,6 +13,7 @@ const PostDetail = () => {
   );
   const { data: fullData } = useFetch("https://dummyjson.com/posts");
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   if (error) return <p>{error}</p>;
   if (loading || !data || !fullData.posts) return <Loader />;
@@ -32,7 +34,7 @@ const PostDetail = () => {
             sx={{ marginBlock: "20px" }}
             onClick={() => navigate(-1)}
           >
-            Back
+            {t("common.back")}
           </Button>
           <Stack direction="row" alignItems="center" spacing="10px">
             {data?.tags?.map((tag) => (

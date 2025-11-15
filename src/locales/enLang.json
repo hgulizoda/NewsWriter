@@ -1,0 +1,117 @@
+{
+  "header": {
+    "logo": "Times Writer",
+    "subtitle": "Get more info about the world",
+    "menu": {
+      "home": "Home",
+      "savedPosts": "Saved Posts",
+      "politics": "Politics",
+      "art": "Art",
+      "science": "Science",
+      "travel": "Travel",
+      "crime": "Crime",
+      "contact": "Contact Us"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitter": "Twitter",
+      "likes": "Likes"
+    }
+  },
+  "footer": {
+    "sections": {
+      "news": {
+        "title": "NEWS",
+        "items": [
+          "Home Page",
+          "Uzbekistan",
+          "World",
+          "Politics",
+          "Sports",
+          "Business"
+        ]
+      },
+      "arts": {
+        "title": "ARTS",
+        "items": ["Book review", "Best Seller Book List", "Dance", "Movies"]
+      },
+      "lifestyle": {
+        "title": "LIFESTYLE",
+        "items": [
+          "Health",
+          "Food",
+          "Restaurants",
+          "Travel",
+          "Style",
+          "Fashion",
+          "Love"
+        ]
+      },
+      "opinion": {
+        "title": "OPINION",
+        "items": [
+          "Today's opinion",
+          "Columnists",
+          "Editorials",
+          "Letters",
+          "Op-docs"
+        ]
+      },
+      "entertainment": {
+        "title": "Entertainment",
+        "items": ["Social Media", "Instagram", "Hobbies", "Television"]
+      },
+      "more": {
+        "title": "MORE",
+        "items": [
+          "Graphics",
+          "Games",
+          "Audio",
+          "Jobs",
+          "Trending",
+          "Reader center",
+          "Times Machine",
+          "Cooking",
+          "Education",
+          "Science"
+        ]
+      },
+      "account": {
+        "title": "ACCOUNT",
+        "items": [
+          "Subscribe",
+          "Manage my account",
+          "Group Subscriptions",
+          "Gift Articles",
+          "Email Newsletters"
+        ]
+      }
+    },
+    "bottom": {
+      "copyright": "© 2025 The New York Times Company",
+      "links": [
+        "Contact Us",
+        "Accessibility",
+        "Work with us",
+        "Advertise",
+        "Privacy policy",
+        "Cookie policy",
+        "Terms of service",
+        "Help",
+        "Subscriptions",
+        "Site map",
+        "Terms of Sale",
+        "T brand studio"
+      ]
+    }
+  },
+  "common": {
+    "error": "Oops, something went wrong!",
+    "noSaved": "You haven't saved any posts yet!",
+    "enter": "Search...",
+    "back": "Back",
+    "notFound": "No post found"
+  }
+}

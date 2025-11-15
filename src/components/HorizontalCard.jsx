@@ -1,7 +1,27 @@
-import { Card, CardMedia, CardContent, Typography, Stack } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Stack,
+  IconButton,
+} from "@mui/material";
 import { Link } from "react-router-dom";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import useAppContext from "../hooks/useContext";
 
 const MainCard = ({ ...rest }) => {
+  const { likedPosts, setLikedPosts } = useAppContext();
+  const isOnSavedList =
+    likedPosts.findIndex((post) => post.id === rest.id) !== -1;
+  function addToSaved() {
+    if (isOnSavedList) {
+      setLikedPosts(likedPosts.filter((post) => post.id !== rest.id));
+    } else {
+      setLikedPosts([...likedPosts, { ...rest, isSaved: true }]);
+    }
+    console.log(likedPosts);
+  }
   return (
     <Card
       component={Link}
@@ -14,8 +34,25 @@ const MainCard = ({ ...rest }) => {
         boxShadow: "none",
         padding: "10px",
         alignItems: "center",
+        position: "relative",
       }}
     >
+      <IconButton
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          addToSaved();
+        }}
+        sx={{
+          position: "absolute",
+          color: `${!isOnSavedList ? "white" : "rgba(201, 61, 61, 1)"}`,
+          backgroundColor: "#cec2c27f",
+          top: "22%",
+          right: "3%",
+        }}
+      >
+        <BookmarkIcon />
+      </IconButton>
       <CardContent>
         <Stack direction="row" alignItems="center" spacing="10px">
           {rest.tags.map((tag) => (
@@ -33,8 +70,12 @@ const MainCard = ({ ...rest }) => {
       </CardContent>
       <CardMedia
         component="img"
-        height="100"
-        sx={{ objectFit: "cover", width: "150px" }}
+        sx={{
+          objectFit: "cover",
+          width: "150px",
+          height: "130px",
+          aspectRatio: "1/1",
+        }}
         image={`https://picsum.photos/seed/${rest.id}/300/200`}
       ></CardMedia>
     </Card>

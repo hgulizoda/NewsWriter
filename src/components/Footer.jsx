@@ -1,7 +1,25 @@
 import { Typography, Box, Stack } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const newsItems = t("footer.sections.news.items", { returnObjects: true });
+  const artsItems = t("footer.sections.arts.items", { returnObjects: true });
+  const lifestyleItems = t("footer.sections.lifestyle.items", {
+    returnObjects: true,
+  });
+  const opinionItems = t("footer.sections.opinion.items", {
+    returnObjects: true,
+  });
+  const entertainmentItems = t("footer.sections.entertainment.items", {
+    returnObjects: true,
+  });
+  const moreItems = t("footer.sections.more.items", { returnObjects: true });
+  const accountItems = t("footer.sections.account.items", {
+    returnObjects: true,
+  });
+  const bottomItems = t("footer.bottom.links", { returnObjects: true });
   return (
     <footer className="container" style={{ marginTop: "50px" }}>
       <Typography
@@ -31,67 +49,51 @@ const Footer = () => {
             }}
           >
             <Stack spacing="10px">
-              <Typography>NEWS</Typography>
-              <Link to="/">Home Page</Link>
-              <Link>Uzbekistan</Link>
-              <Link>World</Link>
-              <Link>Politics</Link>
-              <Link>Sports</Link>
-              <Link>Business</Link>
+              <Typography>{t("footer.sections.news.title")}</Typography>
+              {newsItems.map((item, index) => (
+                <Link key={index}>{item}</Link>
+              ))}
             </Stack>
             <Stack spacing="10px">
-              <Typography>ARTS</Typography>
-              <Link>Book review</Link>
-              <Link>Best Seller Book List</Link>
-              <Link>Dance</Link>
-              <Link>Movies</Link>
+              <Typography>{t("footer.sections.arts.title")}</Typography>
+              {artsItems.map((item, index) => (
+                <Link key={index}>{item}</Link>
+              ))}
             </Stack>
             <Stack spacing="10px">
-              <Typography>LIFESTYLE</Typography>
-              <Link>Health</Link>
-              <Link>Food</Link>
-              <Link>Restaurants</Link>
-              <Link>Travel</Link>
-              <Link>Style</Link>
-              <Link>Fashion</Link>
-              <Link>Love</Link>
+              <Typography>{t("footer.sections.lifestyle.title")}</Typography>
+              {lifestyleItems.map((item, index) => (
+                <Link key={index}>{item}</Link>
+              ))}
             </Stack>
             <Stack spacing="10px">
-              <Typography>OPINION</Typography>
-              <Link>Today's opinion</Link>
-              <Link>Columnists</Link>
-              <Link>Editorials</Link>
-              <Link>Letters</Link>
-              <Link>Op-docs</Link>
+              <Typography>{t("footer.sections.opinion.title")}</Typography>
+              {opinionItems.map((item, index) => (
+                <Link key={index}>{item}</Link>
+              ))}
             </Stack>
 
             <Stack spacing="10px">
-              <Typography>Entertainment</Typography>
-              <Link>Social Media</Link>
-              <Link>Instagram</Link>
-              <Link>Hobbies</Link>
-              <Link>Television</Link>
+              <Typography>
+                {t("footer.sections.entertainment.title")}
+              </Typography>
+              {entertainmentItems.map((item, index) => (
+                <Link key={index}>{item}</Link>
+              ))}
             </Stack>
 
             <Stack spacing="10px">
-              <Typography>MORE</Typography>
-              <Link>Graphics</Link>
-              <Link>Games</Link>
-              <Link>Audio</Link>
-              <Link>Jobs</Link>
-              <Link>Trending</Link>
-              <Link>Reader center</Link>
-              <Link>Times Machine</Link>
-              <Link>Cooking</Link>
-              <Link>Education</Link>
-              <Link>Science</Link>
+              <Typography>{t("footer.sections.more.title")}</Typography>
+              {moreItems.map((item, index) => (
+                <Link key={index}>{item}</Link>
+              ))}
             </Stack>
           </Stack>
 
           <Stack>
             <Stack spacing="10px">
-              <Typography>ACCOUNT</Typography>
-              <Link>Subscribe</Link>
+              <Typography>{t("footer.sections.account.title")}</Typography>
+              <Link>{accountItems[0]}</Link>
               <Link
                 style={{
                   borderBottom: "1px solid lightgray",
@@ -99,11 +101,11 @@ const Footer = () => {
                   marginBottom: "10px",
                 }}
               >
-                Manage my account
+                {accountItems[1]}
               </Link>
-              <Link>Group Subscriptions</Link>
-              <Link>Gift Articles</Link>
-              <Link>Email Newsletters</Link>
+              <Link>{accountItems[2]}</Link>
+              <Link>{accountItems[3]}</Link>
+              <Link>{accountItems[4]}</Link>
             </Stack>
           </Stack>
         </Stack>
@@ -114,19 +116,10 @@ const Footer = () => {
           className="footer-bottom"
           sx={{ paddingBottom: "20px" }}
         >
-          <Link>© 2025 The New York Times Company</Link>
-          <Link>Contact Us</Link>
-          <Link>Accessibility</Link>
-          <Link>Work with us</Link>
-          <Link>Advertise</Link>
-          <Link>Privacy policy</Link>
-          <Link>Cookie policy</Link>
-          <Link>Terms of service</Link>
-          <Link>Help</Link>
-          <Link>Subscriptions</Link>
-          <Link>Site map</Link>
-          <Link>Terms of Sale</Link>
-          <Link>T brand studio</Link>
+          <Link>{t("footer.bottom.copyright")}</Link>
+          {bottomItems.map((item, index) => (
+            <Link key={index}>{item}</Link>
+          ))}
         </Stack>
       </Box>
     </footer>

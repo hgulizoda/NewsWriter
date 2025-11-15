@@ -3,15 +3,28 @@ import {
   CardMedia,
   CardContent,
   Typography,
-  CardActionArea,
   IconButton,
   Stack,
   Button,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ActionsArea from "./ActionsArea";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import useAppContext from "../hooks/useContext";
 const MainCard = ({ ...rest }) => {
+  const { likedPosts, setLikedPosts } = useAppContext();
+  const isOnSavedList =
+    likedPosts.findIndex((post) => post.id === rest.id) !== -1;
+  function addToSaved() {
+    if (isOnSavedList) {
+      setLikedPosts(likedPosts.filter((post) => post.id !== rest.id));
+    } else {
+      setLikedPosts([...likedPosts, { ...rest, isSaved: true }]);
+    }
+  }
+
+  console.log(likedPosts);
+
   return (
     <Card
       component={Link}
@@ -21,6 +34,25 @@ const MainCard = ({ ...rest }) => {
         color: "inherit",
       }}
     >
+      <IconButton
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          addToSaved();
+        }}
+        sx={{
+          position: "absolute",
+          color: `${!isOnSavedList ? "white" : "rgba(251, 0, 0, 1)"}`,
+          backgroundColor: "#cec2c27f",
+          marginTop: "10px",
+          marginLeft: "10px",
+          "&:hover": {
+            color: "rgba(201, 61, 61, 1)",
+          },
+        }}
+      >
+        <BookmarkIcon />
+      </IconButton>
       <CardMedia
         component="img"
         height="480"

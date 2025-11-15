@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 .container {
@@ -23,4 +29,9 @@ footer a {
 
 .footer-bottom a {
   font-size: 12px;
+}
+
+.those a.active {
+  text-decoration: underline;
+  color: black;
 }

@@ -12,6 +12,7 @@ const LongPostCard = ({ ...rest }) => {
         textDecoration: "none",
         color: "inherit",
         paddingBottom: "20px",
+        maxWidth: "25%",
       }}
     >
       <CardMedia
@@ -19,7 +20,7 @@ const LongPostCard = ({ ...rest }) => {
         height="180"
         image={`https://picsum.photos/seed/${rest.id}/300/200`}
       ></CardMedia>
-      <CardContent sx={{ paddingInline: "5px" }}>
+      <CardContent sx={{ paddingInline: "5px", height: "180px" }}>
         <Typography variant="h6">{rest.title}</Typography>
         <Typography variant="body2" color="grey.700">
           {rest.body.split(" ").slice(0, 30).join(" ")}...

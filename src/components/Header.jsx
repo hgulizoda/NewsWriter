@@ -21,7 +21,7 @@ const Header = () => {
     <header>
       <AppBar
         className="container"
-        position="sticky"
+        position="static"
         color="background.main"
         elevation={0}
       >
@@ -75,7 +75,11 @@ const Header = () => {
           </Stack>
         </Toolbar>
 
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{
+            justifyContent: "space-between",
+          }}
+        >
           <Stack direction="row" width="20%" spacing="10px">
             <NavLink>Home</NavLink>
             <NavLink>Saved Posts</NavLink>

@@ -8,7 +8,11 @@ const ActionsArea = ({ reactions, views }) => {
     <Stack
       direction="row"
       spacing="20px"
-      sx={{ color: "grey", marginBottom: "20px", paddingInline: "10px" }}
+      sx={{
+        color: "grey",
+        marginBottom: "20px",
+        paddingInline: "10px",
+      }}
     >
       <Typography
         sx={{

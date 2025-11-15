@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="container">
+    <footer className="container" style={{ marginTop: "50px" }}>
       <Typography
         variant="h5"
         fontFamily="NewsReader"

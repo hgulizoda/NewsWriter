@@ -112,6 +112,7 @@ const Footer = () => {
           direction="row"
           justifyContent="space-between"
           className="footer-bottom"
+          sx={{ paddingBottom: "20px" }}
         >
           <Link>© 2025 The New York Times Company</Link>
           <Link>Contact Us</Link>
